@@ -30,8 +30,8 @@ elements.forEach(element => {
 
 document.addEventListener('touchstart', function(event) {
     // Проверяем, был ли клик внутри элемента .stok-img-container
-    if (!event.target.closest('.stok-img-container') && event.target.closest('.stok-img-container')) {
-      // Если клик был снаружи, закрываем все imgList
+    if (!event.target.closest('.stok-img-container') || event.target.closest('.stok-img-container')) {
+
         const allImgLists = document.querySelectorAll('.stok-img-list.active');
         allImgLists.forEach(imgList => {
             imgList.classList.remove('active');
