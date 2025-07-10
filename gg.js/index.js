@@ -26,6 +26,8 @@ function stokShow() {
             block.classList.add('active'); 
         } else if (blockTop > windowHeight - 90) {
             block.classList.remove('active');
+        } else if (blockTop < windowHeight - 160) {
+            block.classList.remove('active');
         }
 });
 };
