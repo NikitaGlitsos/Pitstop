@@ -1,0 +1,92 @@
+.footer {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    border-top: 2px solid black;
+    border-bottom: 2px solid black;
+    gap: 10px;
+    padding-bottom: 25px;
+    padding-top: 10px;
+    padding-left: 20px;
+    padding-right: 20px;
+    box-shadow: 2px ;
+    width: 100%;
+}
+
+.footer-logo {
+    position: absolute;
+    box-sizing: content-box;
+    border-right: 1px solid black;
+    border-top: 1px solid black;
+    padding: 10px;
+    width: 100px;
+    height: 40px;
+    right: 10px;
+    top: 10px;
+}
+
+.footer-text {
+    transition: 0.8s;
+}
+
+.footer-text:hover {
+    color: snow;
+    border-bottom-color: snow;
+}
+
+.footer-number-block {
+    display: flex;
+    gap: 20px;
+}
+
+.footer-number {
+    padding: 0;
+    align-self: center;
+}
+
+.footer-title {
+    font-family: var(--title-text);
+    font-size: 25px;
+}
+
+.footer-text {
+    font-family: var(--main-text);
+    font-size: 20px;
+    width: max-content;
+    border-bottom: 2px solid black;
+}
+
+.footer-button {
+    background-color: transparent;
+    border: 2px solid black;
+    padding: 10px;
+    width: 150px;
+    transition: 1s;
+}
+
+.footer-button:hover {
+    cursor: pointer;
+    background-color: black;
+}
+
+.footer-button-text {
+    color: snow;
+}
+
+.rainbow {
+    animation: color-change 2s linear;
+    animation-iteration-count: 3;
+}
+
+.footer-icons-container {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+@keyframes color-change {
+    0% { color: snow; }
+    33% { color: black; }
+    100% { color: snow; }
+}

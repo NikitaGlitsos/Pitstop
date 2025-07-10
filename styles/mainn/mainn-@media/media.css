@@ -1,0 +1,146 @@
+@media (max-width: 1200px) {
+    .work-section-cards {
+        grid-template-columns: repeat(3, 1fr);
+    }
+    .work-section-card-text {
+        font-size: clamp(1.125rem, 0.5694rem + 1.1574vw, 1.4375rem);
+    }
+    .stoks-block {
+        grid-template-columns: repeat(2, 1fr);
+        grid-row-gap: 25px;
+        grid-column-gap: 10px;
+    }
+    .stok-card {
+        gap: 5px;
+    }
+    .stok-info {
+        gap: 3px;
+    }
+    .foto-list {
+        grid-template-columns: repeat(6, 1fr);
+        width: 100%;
+        justify-items: center;
+    }
+    .foto-and-info-block {
+        flex-direction: column;
+    }
+    .o-kompanii {
+        gap: 25px;
+        width: 70%;
+    }
+    .none-work-card {
+        display: none;
+    }
+}
+
+@media (max-width: 1024px) {
+    .stok-img-list-text {
+        font-size: 15px;
+    }
+}
+
+@media (max-width: 900px) {
+    .o-kompanii-icon {
+        width: 100px;
+        height: 100px;
+    }
+    .o-kompanii-icon-text {
+        font-size: 15px;
+    }
+    .foto-list {
+        display: flex;
+        padding-top: 5px;
+        padding-bottom: 5px;
+        overflow-x: scroll;
+        scroll-snap-type: x mandatory;
+        border-left: 2px solid black;
+        border-right: 2px solid black;
+    }
+    .foto-list-item {
+        flex: 0 0 auto; 
+        scroll-snap-align: center;
+    }
+    .foto-list::-webkit-scrollbar {
+        width: 0;
+        height: 0;
+        background-color: transparent;
+    }
+    .o-kompanii {
+        width: 100%;
+    }
+}
+
+@media (max-width: 768px) {
+    .work-section-card-text {
+        font-size: 15px;
+    }
+    .header-number-and-icons-container {
+        flex-direction: column-reverse;
+        gap: 0px;
+    }
+    .header-title {
+        align-items: center;
+    }
+    .icons {
+        width: 20px;
+        height: 20px;
+    }
+    .section-title {
+        margin-top: 35px;
+    }
+    .stoks-block {
+        grid-template-columns: repeat(1, 1fr);
+        justify-items: start;
+    }
+    .stok-img-container {
+        height: clamp(15.625rem, 3.125rem + 62.5vw, 33.125rem);
+    }
+    .stok-img-list-text {
+        font-size: clamp(0.9375rem, 0.2679rem + 3.3482vw, 1.875rem);
+    }
+    .foto-list-item {
+        width: 100px;
+        height: 100px;
+    }
+}
+
+@media (max-width: 425px) {
+    .stok-img-container:hover .stok-img-list {
+        transform: translateY(0);
+    }
+    .work-section-cards {
+        grid-template-columns: repeat(2, 1fr);
+    }
+    .work-section-card-text {
+        font-size: 18px;
+    }
+    .stok-title {
+        line-height: 100%;
+        font-size: 24px;
+    }
+    .stok-money-text  {
+        font-size: 20px;
+    }
+    .none-work-card {
+        display: block;
+    }
+    .o-kompanii-icon {
+        width: 60px;
+        height: 60px;
+    }
+    .o-kompanii-icon-text {
+        font-size: 11px;
+    }
+    .kompania-info-text {
+        font-size: 17px;
+        line-height: 20px;
+    }
+    .main {
+        padding-left: 5px;
+        padding-right: 5px;
+    }
+    .section-title {
+        width: calc(100% + 10px);
+        margin-left: -5px;
+    }
+}

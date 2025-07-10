@@ -1,0 +1,8 @@
+@media (max-width: 768px) {
+    .nav-menu {
+        display: none;
+    }
+    .header-number {
+        font-size: 15px;
+    }
+}

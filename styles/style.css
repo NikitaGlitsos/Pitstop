@@ -1,0 +1,22 @@
+@import url('./none.css');
+@import url('../fonts/font.css');
+@import url('./root.css');
+@import url('./globals.css');
+@import url('./header/header.css');
+@import url('./header/header-title.css');
+@import url('./header/header-info.css');
+
+@import url('./header/header-@media/media.css');
+
+@import url('./mainn/main.css');
+@import url('./mainn/main-sections.css');
+@import url('./mainn/scroll-pictures.css');
+@import url('./mainn/main-work.css');
+@import url('./mainn/main-ak.css');
+@import url('./mainn/main-foto-section.css');
+
+@import url('./mainn/mainn-@media/media.css');
+
+@import url('./footer/footer.css');
+@import url('./footer/footer-modal.css');
+@import url('./footer/footer-@media/media.css');

@@ -1,0 +1,97 @@
+.foto-and-info-block {
+    display: flex;
+    padding: 15px;
+    background-color: rgb(84, 86, 87);
+    border-radius: 15px;
+    gap: 20px;
+}
+
+.foto-list {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 10px;
+    width: min-content;
+}
+
+.foto-list-item {
+    border-radius: 10px;
+    overflow: hidden;
+    transition: 0.5s;
+    width: 130px;
+    height: 130px;
+}
+
+.foto-list-item:hover {
+    border: 0.5px solid black;
+}
+
+.foto-img {
+    display: block;
+    width: 100%;
+    object-fit: cover;
+    object-position: center;
+    transition: 0.5s;
+}
+
+.foto-img:hover {
+    cursor: pointer;
+    transform: scale(1.2);
+}
+
+.o-kompanii {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.o-kompanii-icons {
+    display: flex;
+    justify-content: space-between;
+    padding: 0 25px 10px 25px;
+}
+
+.o-kompanii-icon-container {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+}
+
+.o-kompanii-icon-text {
+    font-family: var(--title-text);
+    font-size: 20px;
+    text-align: center;
+}
+
+.kompania-info-title {
+    font-family: var(--title-text);
+    color: snow;
+    font-size: 35px;
+}
+
+.kompania-info-text {
+    font-family: var(--main-text);
+    font-size: 21px;
+    line-height: 35px;
+}
+
+.kompania-info {
+    display: flex;
+    position: relative;
+    flex-direction: column;
+    gap: 5px;
+    color: snow;
+    border-left: 2px solid black;
+    border-bottom: 2px solid black;
+    padding: 7px 12px 12px 12px;
+    border-radius: 10px;
+}
+
+.kompania-info::before {
+    content: '';
+    position: absolute;
+    width: calc(100% - 20px);
+    height: 2px;
+    background-color: black;
+    inset-inline-start: 10px;
+    inset-block-start: 55px;
+}
