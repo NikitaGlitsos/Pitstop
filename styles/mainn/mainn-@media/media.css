@@ -35,7 +35,7 @@
 
 @media (max-width: 1024px) {
     .stok-img-list-text {
-        font-size: 15px;
+        font-size: 14px;
     }
 }
 
@@ -96,7 +96,7 @@
         height: clamp(15.625rem, 3.125rem + 62.5vw, 33.125rem);
     }
     .stok-img-list-text {
-        font-size: clamp(0.9375rem, 0.2679rem + 3.3482vw, 1.875rem);
+        font-size: clamp(0.875rem, 0.5768rem + 1.2723vw, 1.1875rem);
     }
     .foto-list-item {
         width: 100px;
@@ -142,5 +142,8 @@
     .section-title {
         width: calc(100% + 10px);
         margin-left: -5px;
+    }
+    .active {
+        transform: translateY(0);
     }
 }

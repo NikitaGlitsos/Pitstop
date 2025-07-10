@@ -17,13 +17,6 @@ window.addEventListener('scroll', function () {
 // Вызываем функцию при загрузке страницы и при прокрутке
 window.addEventListener('scroll', checkBlocks);
 
-const elements = document.querySelectorAll('.stok-img-container'); // Замените на свой селектор
-
-
-
-
-
-
 function stokShow() {
     stokUl.forEach(block => {
         const blockTop = block.getBoundingClientRect().top; 

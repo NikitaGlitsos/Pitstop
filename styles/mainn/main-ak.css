@@ -34,11 +34,16 @@
     display: inline-block;
     font-family: var(--title-text);
     font-size: 25px;
+}
+.stok-money-before {
     color: #2B2626;
+    height: max-content;
 }
 
 .stok-money-after {
-    background-color: rgb(152, 21, 21);
+    background-color: rgb(219, 23, 23);
+    color: white;
+    padding: 4px 8px;
     border-radius: 10px;
 }
 
@@ -77,7 +82,7 @@
     flex-direction: column;
     gap: 10px;
     padding: 8px;
-    border: 2px solid rgb(152, 21, 21);
+    border: 2px solid rgb(200, 200, 200);
     background-color: rgb(0 0 0 / 0.9);
     color: snow;
     width: 100%;
@@ -87,7 +92,9 @@
 
 .stok-img-list-text {
     font-family: var(--title-text);
-    border-bottom: 1px solid rgb(152, 21, 21);
+    padding-bottom: 5px;
+    padding-left: 8px;
+    border-bottom: 1px solid rgb(200, 200, 200);
     font-size: 19px;
 }
 
