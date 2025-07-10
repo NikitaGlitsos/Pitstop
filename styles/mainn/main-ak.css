@@ -91,7 +91,7 @@
     font-size: 19px;
 }
 
-.stok-img-container:active .stok-img-list {
+.active {
     transform: translateY(20%);
 }
 
