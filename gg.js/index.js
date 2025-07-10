@@ -3,6 +3,8 @@ import { checkBlocks } from './show-titles.js'
 const footerButton = document.querySelector('.footer-button');
 const footerNumber = document.querySelector('.footer-number')
 
+const stokUl = document.querySelectorAll('.stok-img-list')
+
 footerButton.addEventListener('click', function() {
     console.log(footerNumber)
     footerNumber.classList.add('rainbow')
@@ -16,29 +18,31 @@ window.addEventListener('scroll', function () {
 window.addEventListener('scroll', checkBlocks);
 
 const elements = document.querySelectorAll('.stok-img-container'); // Замените на свой селектор
-const elements1 = document.querySelectorAll('.stok-img-container');
 
-elements.forEach(element => {
-    element.addEventListener('touchstart', function(event) {
-        event.preventDefault(); // Предотвращает стандартное поведение (например, выделение текста)
-        const imgList = this.querySelector('.stok-img-list')
-        if (imgList) {
-            if (event.target.closest('.stok-img-container')) {
-                imgList.classList.remove('active');
-            } else  {
-                imgList.classList.add('active');
-            }
+
+
+
+
+
+function stokShow() {
+    stokUl.forEach(block => {
+        const blockTop = block.getBoundingClientRect().top; 
+        const windowHeight = window.innerHeight; 
+
+        if (blockTop < windowHeight - 90) { 
+            block.classList.add('active'); 
+        } else if (blockTop > windowHeight - 90) {
+            block.classList.remove('active');
         }
 });
-});
+};
 
-document.addEventListener('touchstart', function(event) {
-    // Проверяем, был ли клик внутри элемента .stok-img-container
-    if (!event.target.closest('.stok-img-container')) {
-      // Если клик был снаружи, закрываем все imgList
-        const allImgLists = document.querySelectorAll('.stok-img-list.active');
-        allImgLists.forEach(imgList => {
-            imgList.classList.remove('active');
-        });
+function isTouchDevice() {
+    return 'maxTouchPoints' in navigator && navigator.maxTouchPoints > 0;
+}
+
+window.addEventListener('scroll', function() {
+    if (isTouchDevice()) {
+        stokShow()
     }
 });
