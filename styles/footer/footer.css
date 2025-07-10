@@ -85,6 +85,8 @@
     gap: 10px;
 }
 
+
+
 @keyframes color-change {
     0% { color: snow; }
     33% { color: black; }

@@ -91,6 +91,10 @@
     font-size: 19px;
 }
 
+.stok-img-container:active .stok-img-list {
+    transform: translateY(20%);
+}
+
 .stok-img-container:hover .stok-img-list {
     transform: translateY(20%);
 }
