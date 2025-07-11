@@ -1,6 +1,34 @@
-.scroll-pictures {
-    display: block;
-    height: 90vh;
+.scroll-baner {
+    display: flex;
     width: 100%;
     background-color: #2B2626;
+}
+
+.main-foto-list {
+    display: flex;
+    gap: 25px;
+    overflow-x: scroll;
+    scroll-snap-type: x mandatory;
+    overflow-x: hidden;
+    position: relative;
+    width: 100%;
+}
+
+.main-foto-list::-webkit-scrollbar {
+    width: 0;
+    height: 0;
+    background-color: transparent;
+}
+
+.main-foto-list-item {
+    width: 100%;
+    flex: 0 0 auto; 
+    scroll-snap-align: center;
+}
+
+.scroll-baner-item {
+    display: block;
+    width: 100%;
+    object-fit: cover;
+    object-position: center;
 }

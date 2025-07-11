@@ -22,11 +22,9 @@ function stokShow() {
         const blockTop = block.getBoundingClientRect().top; 
         const windowHeight = window.innerHeight; 
 
-        if (blockTop < windowHeight - 90) { 
+        if (blockTop < windowHeight - 90 && blockTop > windowHeight - 160) { 
             block.classList.add('active'); 
-        } else if (blockTop > windowHeight - 90) {
-            block.classList.remove('active');
-        } else if (blockTop < windowHeight - 160) {
+        } else {
             block.classList.remove('active');
         }
 });
