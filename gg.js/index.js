@@ -22,7 +22,7 @@ function stokShow() {
         const blockTop = block.getBoundingClientRect().top; 
         const windowHeight = window.innerHeight; 
 
-        if (blockTop < windowHeight - 90 && blockTop > windowHeight - 160) { 
+        if (blockTop < windowHeight - 90) { 
             block.classList.add('active'); 
         } else {
             block.classList.remove('active');
@@ -37,5 +37,17 @@ function isTouchDevice() {
 window.addEventListener('scroll', function() {
     if (isTouchDevice()) {
         stokShow()
+    }
+});
+
+
+
+const header = document.querySelector('.header-img');
+
+window.addEventListener('scroll', function() {
+    if (window.scrollY > 50) {
+        header.classList.add('scrolled');
+    } else {
+        header.classList.remove('scrolled');
     }
 });

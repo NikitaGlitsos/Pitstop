@@ -2,8 +2,8 @@
     font-family: var(--title-text);
     font-size: 35px;
     text-align: center;
-    margin-top: 95px;
-    margin-bottom: 15px;
+    margin-top: 140px;
+    margin-bottom: 25px;
     width: calc(100% + 40px);
     margin-left: -20px;
     background-color: #2B2626;
@@ -13,6 +13,12 @@
     color: snow;
 }
 
+.work-section {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
 .show {
     opacity: 1; 
     transform: translateY(0);
@@ -20,16 +26,16 @@
 
 .work-section-cards {
     display: grid;
-    grid-template-columns: repeat(5, 1fr);
+    grid-template-columns: repeat(5, minmax(0, 180px));
     grid-template-rows: repeat(2, auto);
     justify-items: center;
-    column-gap: 15px;
+    column-gap: 35px;
     row-gap: 20px;
 }
 
 .work-section-card-text {
     font-family: var(--title-text);
-    font-size: 23px;
+    font-size: 16px;
     padding-left: 7px;
     color: #2B2626;
 }

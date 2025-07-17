@@ -1,16 +1,25 @@
+.main-title {
+    text-align: center;
+    font-family: var(--title-text);
+}
+
 .scroll-baner {
     display: flex;
-    width: 100%;
-    background-color: #2B2626;
+    flex-direction: column;
+    width: 60%;
+    overflow: hidden;
 }
 
 .main-foto-list {
     display: flex;
-    gap: 25px;
+    padding: 4px 2px 0 2px;
+    gap: 10px;
     overflow-x: scroll;
     scroll-snap-type: x mandatory;
-    overflow-x: hidden;
     position: relative;
+    scroll-behavior: smooth;
+    border-left: 2px solid black;
+    border-right: 2px solid black;
     width: 100%;
 }
 
@@ -28,7 +37,39 @@
 
 .scroll-baner-item {
     display: block;
+    border-radius: 5px;
     width: 100%;
     object-fit: cover;
     object-position: center;
+}
+
+
+
+
+
+
+
+
+
+
+.slider-indicators {
+    display: flex;
+    justify-content: center;
+    margin-top: 10px;
+}
+
+.slider-indicator {
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    background-color: #888;
+    border: none;
+    margin: 0 5px;
+    cursor: pointer;
+    padding: 0;
+    outline: none;
+}
+
+.slider-indicator.active {
+    background-color: #fff;
 }

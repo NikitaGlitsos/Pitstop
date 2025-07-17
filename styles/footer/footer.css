@@ -1,11 +1,9 @@
 .footer {
     position: relative;
     display: flex;
-    flex-direction: column;
     justify-content: space-between;
     border-top: 2px solid black;
     border-bottom: 2px solid black;
-    gap: 10px;
     padding-bottom: 25px;
     padding-top: 10px;
     padding-left: 20px;
@@ -24,15 +22,6 @@
     bottom: 15px;
 }
 
-.footer-text {
-    transition: 0.8s;
-}
-
-.footer-text:hover {
-    color: snow;
-    border-bottom-color: snow;
-}
-
 .footer-number-block {
     display: flex;
     gap: 20px;
@@ -46,13 +35,6 @@
 .footer-title {
     font-family: var(--title-text);
     font-size: 25px;
-}
-
-.footer-text {
-    font-family: var(--main-text);
-    font-size: 20px;
-    width: max-content;
-    border-bottom: 2px solid black;
 }
 
 .footer-button {
@@ -82,8 +64,6 @@
     align-items: center;
     gap: 10px;
 }
-
-
 
 @keyframes color-change {
     0% { color: snow; }

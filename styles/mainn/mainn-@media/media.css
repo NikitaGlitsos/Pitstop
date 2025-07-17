@@ -1,6 +1,6 @@
 @media (max-width: 1200px) {
     .work-section-cards {
-        grid-template-columns: repeat(3, 1fr);
+        grid-template-columns: repeat(3, minmax(0, 230px));
     }
     .work-section-card-text {
         font-size: clamp(1.125rem, 0.5694rem + 1.1574vw, 1.4375rem);
@@ -71,6 +71,12 @@
 }
 
 @media (max-width: 768px) {
+    .scroll-baner {
+        width: 80%;
+    }
+    .work-section-cards {
+        gap: 15px;
+    }
     .work-section-card-text {
         font-size: 15px;
     }
@@ -135,6 +141,15 @@
         font-size: 17px;
         line-height: 20px;
     }
+    .section-mesto-block {
+        padding-bottom: 50px;
+    }
+    .adress-block-text{
+        font-size: 15px;
+    }
+    .adress-block-adress-text {
+        font-size: 20px;
+    }
     .main {
         padding-left: 5px;
         padding-right: 5px;
@@ -145,5 +160,9 @@
     }
     .active {
         transform: translateY(0);
+    }
+    .section-card-adress-block {
+        width: 310px;
+        height: 310px;
     }
 }
