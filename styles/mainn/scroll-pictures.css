@@ -6,7 +6,7 @@
 .scroll-baner {
     display: flex;
     flex-direction: column;
-    width: 60%;
+    width: 70%;
     overflow: hidden;
 }
 
@@ -55,21 +55,22 @@
 .slider-indicators {
     display: flex;
     justify-content: center;
-    margin-top: 10px;
+    gap: 15px;
+    margin-top: 10px; /* Отступ сверху */
 }
 
 .slider-indicator {
     width: 10px;
     height: 10px;
-    border-radius: 50%;
-    background-color: #888;
-    border: none;
-    margin: 0 5px;
-    cursor: pointer;
     padding: 0;
+    border-radius: 50%;
+    background-color: #9e9e9e;
+    border: none;
+    cursor: pointer;
     outline: none;
 }
 
 .slider-indicator.active {
-    background-color: #fff;
+    background-color: #1a1a1a; /* Цвет активного индикатора */
+    transform: translateY(0px)
 }

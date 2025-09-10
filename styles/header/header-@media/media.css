@@ -1,8 +1,17 @@
 @media (max-width: 768px) {
+    .slogan {
+        font-size: 18px;
+    }
     .nav-menu {
         display: none;
     }
     .header-number {
-        font-size: 15px;
+        font-size: 20px;
+    }
+}
+
+@media (max-width: 575px) {
+    .slogan {
+        display: none;
     }
 }

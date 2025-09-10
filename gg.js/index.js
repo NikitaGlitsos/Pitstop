@@ -1,4 +1,5 @@
 import { checkBlocks } from './show-titles.js'
+import { nextSlide, updateIndicators } from './scroler.js'
 
 const footerButton = document.querySelector('.footer-button');
 const footerNumber = document.querySelector('.footer-number')
@@ -40,14 +41,18 @@ window.addEventListener('scroll', function() {
     }
 });
 
+setInterval(nextSlide, 4000);
 
 
 const header = document.querySelector('.header-img');
+const slogan = document.querySelector('.slogan')
 
 window.addEventListener('scroll', function() {
     if (window.scrollY > 50) {
         header.classList.add('scrolled');
+        slogan.classList.add('none')
     } else {
         header.classList.remove('scrolled');
+        slogan.classList.remove('none')
     }
 });

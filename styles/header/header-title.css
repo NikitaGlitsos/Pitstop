@@ -2,10 +2,27 @@
     display: flex;
     justify-content: space-between;
     border-bottom: 1px solid rgb(0, 0, 0);
+    gap: 10px;
     padding-bottom: 5px;
     padding-top: 9px;
     padding-left: 20px;
     padding-right: 20px;
+}
+
+.slogan {
+    align-self: center;
+    padding-top: 5px;
+    border-radius: 4px;
+    line-height: 90%;
+    color: black;
+    max-width: 250px;
+    font-family: var(--title-text);
+    font-size: 20px;
+}
+
+.header-logo-info {
+    display: flex;
+    gap: 20px;
 }
 
 .nav-menu {
@@ -40,8 +57,8 @@
 .number {
     font-family: var(--title-text);
     line-height: 100%;
-    font-size: 23px;
-    padding-bottom: 2px;
+    font-size: 30px;
+    padding-bottom: 5px;
 }
 
 .header-icons-container {
@@ -50,8 +67,8 @@
 }
 
 .icons {
-    width: 35px;
-    height: 35px;
+    width: 45px;
+    height: 45px;
 }
 
 .icons:hover {

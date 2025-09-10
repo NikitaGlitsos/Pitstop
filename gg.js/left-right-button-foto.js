@@ -12,6 +12,7 @@ images.forEach((img, index) => {
     img.addEventListener('click', function() {
         modal.style.display = 'flex';
         modalImage.src = this.src;
+        document.body.classList.add('overflow-hidden');
         a = index;
         });
 });
@@ -58,11 +59,13 @@ document.addEventListener('keydown', function (evt) {
 
 closeBtn.addEventListener('click', function() {
     modal.style.display = 'none';
+    document.body.classList.remove('overflow-hidden');
 });
 
 // Закрытие модального окна при клике вне изображения
 window.addEventListener('click', function(event) {
     if (event.target == modal) {
         modal.style.display = 'none';
+        document.body.classList.remove('overflow-hidden');
     }
 });

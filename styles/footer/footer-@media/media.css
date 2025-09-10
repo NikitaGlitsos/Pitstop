@@ -1,12 +1,3 @@
-@media (max-width: 425px) {
-    .footer-number-block {
-        flex-direction: column;
-    }
-    .footer-number {
-        align-self: start;
-    }
-}
-
 @media (max-width: 900px) {
     .right {
         right: 30px;
@@ -28,6 +19,16 @@
     }
     .footer-logo {
         display: none;
+    }
+}
+
+@media (max-width: 510px) {
+    .footer-number-block {
+        gap: 5px;
+        flex-direction: column;
+    }
+    .footer-number {
+        align-self: start;
     }
 }
 
@@ -57,9 +58,6 @@
     }
     .footer-logo {
         border-color: transparent;
-    }
-    .footer-number-block {
-        gap: 5px;
     }
     .footer-title {
         font-size: 25px;

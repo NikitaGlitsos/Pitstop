@@ -24,12 +24,12 @@
 
 .footer-number-block {
     display: flex;
+    align-items: center;
     gap: 20px;
 }
 
 .footer-number {
     padding: 0;
-    align-self: center;
 }
 
 .footer-title {
@@ -63,6 +63,14 @@
     display: flex;
     align-items: center;
     gap: 10px;
+}
+
+.simpl-link {
+    display: inline-block;
+}
+
+.icons {
+    vertical-align: bottom;
 }
 
 @keyframes color-change {
