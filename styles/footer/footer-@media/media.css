@@ -30,6 +30,12 @@
     .footer-number {
         align-self: start;
     }
+    .footer-number-block {
+        align-items: start;
+    }
+    .call-block {
+        gap: 30px;
+    }
 }
 
 @media (max-width: 425px) {

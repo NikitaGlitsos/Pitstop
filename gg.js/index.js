@@ -1,5 +1,5 @@
 import { checkBlocks } from './show-titles.js'
-import { nextSlide, updateIndicators } from './scroler.js'
+import { nextSlide } from './scroler.js'
 
 const footerButton = document.querySelector('.footer-button');
 const footerNumber = document.querySelector('.footer-number')
@@ -40,9 +40,6 @@ window.addEventListener('scroll', function() {
         stokShow()
     }
 });
-
-setInterval(nextSlide, 4000);
-
 
 const header = document.querySelector('.header-img');
 const slogan = document.querySelector('.slogan')

@@ -4,7 +4,7 @@ const slideWidth = slides[0].offsetWidth;
 const indicators = Array.from(document.querySelectorAll('.slider-indicator')); // Получаем все индикаторы
 let currentSlide = 0;
 
-export function updateIndicators() {
+function updateIndicators() {
     indicators.forEach((indicator, index) => {
         if (index === currentSlide) {
             indicator.classList.add('active');
@@ -22,3 +22,5 @@ export function nextSlide() {
     slider.scrollLeft = currentSlide * slideWidth;
     updateIndicators();
 }
+
+setInterval(nextSlide, 4000);
