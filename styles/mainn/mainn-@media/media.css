@@ -90,6 +90,7 @@
     }
     .adress-video {
         width: 400px;
+        height: 650px;
     }
 }
 
@@ -144,6 +145,9 @@
         width: calc(100% + 10px);
         margin-left: -5px;
     }
+    .section-title-important {
+        margin-left: 0;
+    }
     .active {
         transform: translateY(0);
     }
@@ -153,5 +157,6 @@
     }
     .adress-video {
         width: 310px;
+        height: 540px;
     }
 }
