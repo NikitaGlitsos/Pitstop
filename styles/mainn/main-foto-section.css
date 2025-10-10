@@ -1,5 +1,6 @@
 .foto-and-info-block {
     display: flex;
+    flex-direction: column;
     padding: 15px;
     background-color: rgb(84, 86, 87);
     border-radius: 15px;
@@ -7,13 +8,22 @@
 }
 
 .foto-list {
-    display: grid;
-    grid-template-columns: repeat(4, 1fr);
+    display: flex;
+    justify-items: center;
+    align-items: center;
     gap: 10px;
-    width: min-content;
+    padding-top: 5px;
+    padding-bottom: 5px;
+    overflow-x: scroll;
+    scroll-snap-type: x mandatory;
+    border-left: 2px solid black;
+    border-right: 2px solid black;
+    width: 100%;
 }
 
 .foto-list-item {
+    flex: 0 0 auto; 
+    scroll-snap-align: center;
     border-radius: 10px;
     overflow: hidden;
     transition: 0.5s;
@@ -23,6 +33,12 @@
 
 .foto-list-item:hover {
     border: 0.5px solid black;
+}
+
+.foto-list::-webkit-scrollbar {
+    width: 0;
+    height: 0;
+    background-color: transparent;
 }
 
 .foto-img {
@@ -43,7 +59,8 @@
 .o-kompanii {
     display: flex;
     flex-direction: column;
-    gap: 20px;
+    gap: 25px;
+    width: 70%;
     justify-content: space-between;
 }
 

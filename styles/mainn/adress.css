@@ -41,8 +41,20 @@
     position: relative;
     flex-direction: column;
     width: 100%;
+    align-items: center;
     padding-bottom: 100px;
     gap: 20px;
+}
+
+.adress-blocks-container {
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+}
+
+.adress-video {
+    display: block;
+    height: 100%
 }
 
 .call-block {

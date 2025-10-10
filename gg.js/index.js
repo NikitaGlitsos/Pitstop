@@ -16,6 +16,7 @@ window.addEventListener('scroll', function () {
 });
 
 // Вызываем функцию при загрузке страницы и при прокрутке
+checkBlocks()
 window.addEventListener('scroll', checkBlocks);
 
 function stokShow() {

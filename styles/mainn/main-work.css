@@ -13,6 +13,10 @@
     color: snow;
 }
 
+.section-title-important {
+    margin-left: 0;
+}
+
 .work-section {
     display: flex;
     flex-direction: column;

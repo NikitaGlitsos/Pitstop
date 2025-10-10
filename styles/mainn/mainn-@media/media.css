@@ -16,18 +16,6 @@
     .stok-info {
         gap: 3px;
     }
-    .foto-list {
-        grid-template-columns: repeat(6, 1fr);
-        width: 100%;
-        justify-items: center;
-    }
-    .foto-and-info-block {
-        flex-direction: column;
-    }
-    .o-kompanii {
-        gap: 25px;
-        width: 70%;
-    }
     .none-work-card {
         display: none;
     }
@@ -40,6 +28,16 @@
 }
 
 @media (max-width: 900px) {
+    .scroll-baner-item {
+        border-radius: 0;
+    }
+    .scroll-baner {
+        width: calc(100% + 40px);
+        margin-top: -30px;
+    }
+    .main-foto-list {
+        padding: 0;
+    }
     .o-kompanii-icon {
         width: 100px;
         height: 100px;
@@ -47,33 +45,12 @@
     .o-kompanii-icon-text {
         font-size: 15px;
     }
-    .foto-list {
-        display: flex;
-        padding-top: 5px;
-        padding-bottom: 5px;
-        overflow-x: scroll;
-        scroll-snap-type: x mandatory;
-        border-left: 2px solid black;
-        border-right: 2px solid black;
-    }
-    .foto-list-item {
-        flex: 0 0 auto; 
-        scroll-snap-align: center;
-    }
-    .foto-list::-webkit-scrollbar {
-        width: 0;
-        height: 0;
-        background-color: transparent;
-    }
     .o-kompanii {
         width: 100%;
     }
 }
 
 @media (max-width: 768px) {
-    .scroll-baner {
-        width: 80%;
-    }
     .work-section-cards {
         gap: 15px;
     }
@@ -108,11 +85,17 @@
         width: 100px;
         height: 100px;
     }
+    .adress-blocks-container {
+        flex-direction: column;
+    }
+    .adress-video {
+        width: 400px;
+    }
 }
 
 @media (max-width: 425px) {
     .scroll-baner {
-        width: 95%;
+        width: calc(100% + 10px);
     }
     .stok-img-container:hover .stok-img-list {
         transform: translateY(0);
@@ -167,5 +150,8 @@
     .section-card-adress-block {
         width: 310px;
         height: 310px;
+    }
+    .adress-video {
+        width: 310px;
     }
 }
