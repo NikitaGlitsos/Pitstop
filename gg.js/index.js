@@ -54,3 +54,4 @@ window.addEventListener('scroll', function() {
         slogan.classList.remove('none')
     }
 });
+
