@@ -32,7 +32,7 @@ function stokShow() {
 });
 };
 
-function isTouchDevice() {
+export function isTouchDevice() {
     return 'maxTouchPoints' in navigator && navigator.maxTouchPoints > 0;
 }
 

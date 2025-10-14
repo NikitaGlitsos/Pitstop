@@ -1,3 +1,5 @@
+import { isTouchDevice } from './index.js'
+
 const slider = document.querySelector('.main-foto-list');
 const slides = document.querySelectorAll('.main-foto-list-item');
 const slideWidth = slides[0].offsetWidth;
@@ -6,7 +8,7 @@ const videos = document.querySelectorAll('.video'); // Получаем все �
 
 let currentSlide = 0;
 let autoSlideTimeout; // Переменная для хранения ID таймера
-let isTouchedOnVideo = false; // Флаг, указывающий на то, коснулись ли видео
+let isMouseOverVideo = false;
 
 function updateIndicators() {
     indicators.forEach((indicator, index) => {
@@ -17,7 +19,12 @@ function updateIndicators() {
         }
     });
     // Запускаем nextSlide только если не остановлен вручную
-    if (!isMouseOverVideo || !isTouchedOnVideo) {
+    if (isTouchDevice()) {
+        videos.forEach(video => {
+            video.setAttribute('controls', 'controls')
+            video.getAttribute('autoplay', 'autoplay')
+        })
+    } else if (!isMouseOverVideo) {
         autoSlideTimeout = setTimeout(nextSlide, 3000);
     }
 }
@@ -28,20 +35,16 @@ export function nextSlide() {
     updateIndicators();
 }
 
-let isMouseOverVideo = false; // Флаг, указывающий на то, находится ли мышь над видео
-
 videos.forEach(video => { // Перебираем каждый элемент video
     video.addEventListener('mouseover', () => {
         video.setAttribute('controls', 'controls');
         isMouseOverVideo = true; // Устанавливаем флаг
-        isTouchedOnVideo = true;
         clearTimeout(autoSlideTimeout); // Останавливаем таймер
     });
 
     video.addEventListener('mouseout', () => {
         video.removeAttribute('controls');
         isMouseOverVideo = false; // Сбрасываем флаг
-        isTouchedOnVideo = false;
         updateIndicators(); // Запускаем updateIndicators, чтобы возобновить цикл
     });
 });
