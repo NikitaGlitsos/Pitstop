@@ -2,10 +2,11 @@ const slider = document.querySelector('.main-foto-list');
 const slides = document.querySelectorAll('.main-foto-list-item');
 const slideWidth = slides[0].offsetWidth;
 const indicators = Array.from(document.querySelectorAll('.slider-indicator')); // Получаем все индикаторы
-const videos = document.querySelectorAll('video'); // Получаем все элементы <video> на странице
+const videos = document.querySelectorAll('.video'); // Получаем все элементы <video> на странице
 
 let currentSlide = 0;
 let autoSlideTimeout; // Переменная для хранения ID таймера
+let isTouchedOnVideo = false; // Флаг, указывающий на то, коснулись ли видео
 
 function updateIndicators() {
     indicators.forEach((indicator, index) => {
@@ -16,7 +17,7 @@ function updateIndicators() {
         }
     });
     // Запускаем nextSlide только если не остановлен вручную
-    if (!isMouseOverVideo) {
+    if (!isMouseOverVideo || !isTouchedOnVideo) {
         autoSlideTimeout = setTimeout(nextSlide, 3000);
     }
 }
@@ -33,12 +34,14 @@ videos.forEach(video => { // Перебираем каждый элемент vi
     video.addEventListener('mouseover', () => {
         video.setAttribute('controls', 'controls');
         isMouseOverVideo = true; // Устанавливаем флаг
+        isTouchedOnVideo = true;
         clearTimeout(autoSlideTimeout); // Останавливаем таймер
     });
 
     video.addEventListener('mouseout', () => {
         video.removeAttribute('controls');
         isMouseOverVideo = false; // Сбрасываем флаг
+        isTouchedOnVideo = false;
         updateIndicators(); // Запускаем updateIndicators, чтобы возобновить цикл
     });
 });
