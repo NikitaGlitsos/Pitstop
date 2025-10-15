@@ -4,6 +4,7 @@
 }
 
 .scroll-baner {
+    position: relative;
     display: flex;
     flex-direction: column;
     width: 70%;
@@ -41,8 +42,53 @@
 }
 
 
+.scroll-baner-after, .scroll-baner-before{
+    display: none;
+    justify-content: center;
+    align-items: center;
+    perspective: 1000px;
+    z-index: 10;
+    position: absolute;
+    margin-top: 4px;
+    width: 20px;
+    height: 100%;
+}
+
+.scroll-baner-after {
+    top: 0;
+    right: 10px;
+}
+
+.scroll-baner-before {
+    top: 0;
+    left: 10px;
+}
+
+.scroll-baner-before:hover, .scroll-baner-after:hover {
+    cursor: pointer;
+    opacity: 0.6;
+}
+
+.simbol {
+    font-size: 20px;
+    font-weight: 900;
+    animation: zoomInOut 1s infinite alternate;
+    color: snow;
+}
 
 
+@keyframes zoomInOut {
+    0% {
+      transform: translateZ(0); /* Исходное положение по оси Z */
+    }
+    100% {
+      transform: translateZ(400px); /* Приближается к пользователю на 100px */
+    }
+}
+
+.not-none-scroll-simbol {
+    display: flex;
+}
 
 
 
@@ -54,6 +100,10 @@
     justify-content: center;
     gap: 15px;
     margin-top: 10px; /* Отступ сверху */
+}
+
+.none-indicators {
+    display: none;
 }
 
 .slider-indicator {

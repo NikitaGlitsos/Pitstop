@@ -6,6 +6,11 @@ const slideWidth = slides[0].offsetWidth;
 const indicators = Array.from(document.querySelectorAll('.slider-indicator')); // Получаем все индикаторы
 const videos = document.querySelectorAll('.video'); // Получаем все элементы <video> на странице
 
+const indicatorsNone = document.querySelector('.slider-indicators')
+
+const scrollFhone = document.querySelectorAll('.scroll-baner')
+
+
 let currentSlide = 0;
 let autoSlideTimeout; // Переменная для хранения ID таймера
 let isMouseOverVideo = false;
@@ -22,9 +27,17 @@ function updateIndicators() {
     if (isTouchDevice()) {
         videos.forEach(video => {
             video.setAttribute('controls', 'controls')
-            video.getAttribute('autoplay', 'autoplay')
-        })
+            video.removeAttributeAttribute('autoplay', 'autoplay')
+            scrollFhone.forEach(simbol => {
+                simbol.classList.add('not-none-scroll-simbol')
+            });
+            indicatorsNone.classList.add('none-indicators')
+        });
     } else if (!isMouseOverVideo) {
+        indicatorsNone.classList.remove('none-indicators')
+        scrollFhone.forEach(simbol => {
+            simbol.classList.remove('not-none-scroll-simbol')
+        });
         autoSlideTimeout = setTimeout(nextSlide, 3000);
     }
 }
