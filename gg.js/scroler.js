@@ -33,6 +33,7 @@ if (isTouchDevice()) {
     videos.forEach(video => {
         video.setAttribute('controls', 'controls')
         video.removeAttribute('autoplay')
+        video.removeAttribute('loop')
         scrollFhone.forEach(simbol => {
             simbol.classList.add('not-none-scroll-simbol')
         });

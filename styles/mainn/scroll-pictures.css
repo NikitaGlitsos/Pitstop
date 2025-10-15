@@ -49,18 +49,16 @@
     perspective: 1000px;
     z-index: 10;
     position: absolute;
+    top: calc(50% - 10px);
     margin-top: 4px;
     width: 20px;
-    height: 100%;
 }
 
 .scroll-baner-after {
-    top: 0;
     right: 10px;
 }
 
 .scroll-baner-before {
-    top: 0;
     left: 10px;
 }
 

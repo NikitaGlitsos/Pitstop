@@ -28,6 +28,10 @@
 }
 
 @media (max-width: 900px) {
+    .foto-and-info-block {
+        background-image: none;
+        padding: 15px;
+    }
     .scroll-baner-item {
         border-radius: 0;
     }
