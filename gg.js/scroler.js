@@ -27,7 +27,7 @@ function updateIndicators() {
     if (isTouchDevice()) {
         videos.forEach(video => {
             video.setAttribute('controls', 'controls')
-            video.removeAttributeAttribute('autoplay', 'autoplay')
+            video.removeAttribute('autoplay', 'autoplay')
             scrollFhone.forEach(simbol => {
                 simbol.classList.add('not-none-scroll-simbol')
             });
@@ -35,9 +35,6 @@ function updateIndicators() {
         });
     } else if (!isMouseOverVideo) {
         indicatorsNone.classList.remove('none-indicators')
-        scrollFhone.forEach(simbol => {
-            simbol.classList.remove('not-none-scroll-simbol')
-        });
         autoSlideTimeout = setTimeout(nextSlide, 3000);
     }
 }
