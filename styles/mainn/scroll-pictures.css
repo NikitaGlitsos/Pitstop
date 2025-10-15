@@ -72,8 +72,21 @@
 .simbol {
     font-size: 20px;
     font-weight: 900;
+    -webkit-animation: zoomInOut 1s infinite alternate;
     animation: zoomInOut 1s infinite alternate;
     color: snow;
+}
+
+
+@-webkit-keyframes zoomInOut { /* Для Safari */
+    0% {
+        -webkit-transform: translateZ(0);
+            transform: translateZ(0);
+    }
+    100% {
+        -webkit-transform: translateZ(400px);
+            transform: translateZ(400px);
+    }
 }
 
 
@@ -82,7 +95,7 @@
       transform: translateZ(0); /* Исходное положение по оси Z */
     }
     100% {
-      transform: translateZ(400px); /* Приближается к пользователю на 100px */
+      transform: translateZ(400px); /* Приближается к пользователю на 400px */
     }
 }
 
