@@ -1,10 +1,10 @@
 .foto-and-info-block {
     display: flex;
     flex-direction: column;
-    padding: 15px 50px;
+    padding: 15px 75px;
     background-color: rgb(84, 86, 87);
     background-image: url(../../newImges/lорогга.png);
-    background-position: calc(100% - 50px);
+    background-position: calc(100% - 75px);
     background-repeat: no-repeat;
     background-size: contain;
     border-radius: 15px;

@@ -32,6 +32,7 @@
 
 .section-card-adress-block {
     position: relative;
+    z-index: 1;
     width: 400px;
     height: 400px;
 }
@@ -49,6 +50,11 @@
 .adress-blocks-container {
     display: flex;
     justify-content: center;
+    align-items: center;
+    background-color: rgb(84, 86, 87);
+    border-radius: 15px;
+    width: 100%;
+    padding: 30px;
     gap: 30px;
 }
 
