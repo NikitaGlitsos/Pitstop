@@ -7,7 +7,6 @@ const indicators = Array.from(document.querySelectorAll('.slider-indicator')); /
 const videos = document.querySelectorAll('.video'); // Получаем все элементы <video> на странице
 
 const indicatorsNone = document.querySelector('.slider-indicators')
-
 const scrollFhone = document.querySelectorAll('.scroll-baners')
 
 
@@ -15,23 +14,9 @@ let currentSlide = 0;
 let autoSlideTimeout; // Переменная для хранения ID таймера
 let isMouseOverVideo = false;
 
-videos.forEach(video => { // Перебираем каждый элемент video
-    video.addEventListener('mouseover', () => {
-        video.setAttribute('controls', 'controls');
-        isMouseOverVideo = true; // Устанавливаем флаг
-        clearTimeout(autoSlideTimeout); // Останавливаем таймер
-    });
-
-    video.addEventListener('mouseout', () => {
-        video.removeAttribute('controls');
-        isMouseOverVideo = false; // Сбрасываем флаг
-        updateIndicators(); // Запускаем updateIndicators, чтобы возобновить цикл
-    });
-});
-
 if (isTouchDevice()) {
     videos.forEach(video => {
-        video.setAttribute('controls', 'controls')
+        controlsAtribute(video)
         video.removeAttribute('autoplay')
         video.removeAttribute('loop')
     });
@@ -44,6 +29,23 @@ if (isTouchDevice()) {
     scrollFhone.forEach(simbol => {
         simbol.classList.remove('not-none-scroll-simbol')
     });
+    videos.forEach(video => { // Перебираем каждый элемент video
+        video.addEventListener('mouseover', () => {
+            controlsAtribute(video)
+            isMouseOverVideo = true; // Устанавливаем флаг
+            clearTimeout(autoSlideTimeout); // Останавливаем таймер
+        });
+    
+        video.addEventListener('mouseout', () => {
+            video.removeAttribute('controls');
+            isMouseOverVideo = false; // Сбрасываем флаг
+            updateIndicators(); // Запускаем updateIndicators, чтобы возобновить цикл
+        });
+    });
+}
+
+function controlsAtribute(video) {
+    video.setAttribute('controls', 'controls');
 }
 
 function updateIndicators() {
