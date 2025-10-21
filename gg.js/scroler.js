@@ -34,11 +34,11 @@ if (isTouchDevice()) {
         video.setAttribute('controls', 'controls')
         video.removeAttribute('autoplay')
         video.removeAttribute('loop')
-        scrollFhone.forEach(simbol => {
-            simbol.classList.add('not-none-scroll-simbol')
-        });
-        indicatorsNone.classList.add('none-indicators')
     });
+    scrollFhone.forEach(simbol => {
+        simbol.classList.add('not-none-scroll-simbol')
+    });
+    indicatorsNone.classList.add('none-indicators')
 } else {
     indicatorsNone.classList.remove('none-indicators')
     scrollFhone.forEach(simbol => {
